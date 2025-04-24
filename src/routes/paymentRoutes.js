@@ -4,6 +4,6 @@ const paymentController = require('../controllers/paymentController');
 
 router.post('/', paymentController.recordPayment);
 router.get('/:id', paymentController.getPayment);
-router.post('/webhook', paymentController.webhookPaymentUpdate);
+router.post('/paymentUpdate', paymentController.paymentUpdate);
 
 module.exports = router;

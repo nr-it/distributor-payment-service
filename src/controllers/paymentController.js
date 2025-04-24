@@ -30,7 +30,7 @@ exports.getDistributorPayments = async (req, res, next) => {
   }
 };
 
-exports.webhookPaymentUpdate = async (req, res, next) => {
+exports.paymentUpdate = async (req, res, next) => {
   try {
     const { transactionId, status } = req.body;
     const payment = await Payment.findOneAndUpdate({ transactionId }, { status }, { new: true });
